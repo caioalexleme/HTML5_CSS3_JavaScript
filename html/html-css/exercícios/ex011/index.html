@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../ex004/favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+<picture>
+    <source media="(max-width: 750px)" srcset="imagens/foto1.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imagens/foto2.png" type="image/png">
+    <img src="imagens/foto3.png" alt="Imagem flexível">
+
+</picture>  
+<h1>Reproduzindo audio</h1>     
+
+<audio src="midia/reaggue.mp3" autoplay controls></audio>
+<!--Compatível Mp3, Wav, Ogg-->
+<!---->
+<audio preload="metadata" autoplay controls loop>
+    <source src="midia/rock.mp3" type="audio/mpeg">
+    <source src="midia/rock.mp3" type="ogg">
+    <source src="midia/rock.mp3" type="wav">
+            
+    
+</audio>
+
+
+
+</body>
+</html>

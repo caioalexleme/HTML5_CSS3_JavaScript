@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de caixas</title>
+    <style>
+       h1{              /* box-level */
+            /*display: inline;*/        /* Caso queira transformar em inline-level */
+            background-color: lightgray;
+            height: 300px;
+            width: 300px;
+
+            border-width: 10px;
+            border-style: solid;
+            border-color: darkgrey;
+            /*border: 10px solid darkgrey;*/    /* Simplificando usando shorthand (Mesmo resultado)*/
+
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            /*padding: 10px 10px 10px 10px;*/   /* Simplificando usando shorthand (Mesmo resultado)*/
+            /*padding: 10px;*/                  /* Como nesse caso os quatro lados são 10px pode ser assim também (Mesmo resultado)*/
+            /*padding: 10px 20px;*/             /* Neste caso com dois valores, Top e Bottom ficam com 10px, Right e Left ficam com 20px*/
+
+            /*margin: auto;*/           /* Centraliza a caixa horizontalmente. */
+            margin-top: 20px;
+            margin-right: 20pc;
+            margin-bottom: 40px;
+            margin-left: 20px;
+            /*margin: 20px 20px 40px 20px;*/    /* Simplificando usando shorthand (Mesmo resultado)*/
+            /*margin: 20px auto;*/  /* Neste caso com dois valores, Top e Bottom ficam com 20px, e ao alinhamento horizontal fica centralizado*/
+
+            outline-width: 10px;
+            outline-style: dashed;
+            outline-color: salmon;
+            /*outline: 10px dashed salmon;*/    /* Simplificando usando shorthand (Mesmo resultado)*/
+        }
+        a{  /* inline-level */
+            /*display: block;*/         /* Caso queira transformar em block-level */     
+            border-width: 10px;
+            border-style: solid;
+            border-color: red;
+            padding-top: 10px;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de caixas box-level</h1>
+    <p>Parágrafos também são exeplos de box-level mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona</p>
+
+</body>
+</html>
