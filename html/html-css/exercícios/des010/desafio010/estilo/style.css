@@ -37,11 +37,13 @@ header{
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
+    padding-bottom: 20px;
 }
 
 header > h1{
     color: white;
     font-family: var(--fonte-destaque);
+    font-weight: normal;
     margin-bottom: 20px;
     font-size: 3em;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
@@ -55,7 +57,9 @@ header > p {
     max-width: 600px;
     padding: 0px 10px;
     margin: auto;
+    margin-bottom: 20px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315);
+    
 }
 
 nav{
@@ -66,7 +70,7 @@ nav{
 }
 
 nav > a {
-    color: white;
+    color: var(--cor1);
     padding: 10px;
     text-decoration: none;
     transition-duration: .5s;
@@ -79,9 +83,16 @@ nav > a:hover{
 
 }
 
+@media (max-width: 445px){
+    nav > a{
+        display: inline-block;
+        margin: 5px 0px;
+    }
+}
+
 main{
     background-color: white;
-    min-width: 300px;
+    
     max-width: 1000px;
     margin: auto;
     margin-bottom: 30px;
@@ -94,12 +105,15 @@ main{
 main h1{
     color:var(--cor6);
     font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
 }
 
 main h2{
     font-family: var(--fonte-android);
     color: var(--cor4);
     font-size: 1.3em;
+    font-weight: normal;
     background-image: linear-gradient(to right, var(--cor1), transparent);
     text-indent: 8px;
 }
@@ -141,6 +155,23 @@ main img.pequena{
     margin: auto;
 }
 
+.video{
+    background-color:var(--cor5);
+    margin-bottom: 30px;
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    position: relative;
+    padding-bottom: 59%;
+}
+
+.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
 aside{
     background-color: var(--cor1);
     padding: 10px;
@@ -160,6 +191,12 @@ aside > ul{
     list-style-type: '\2714\00A0\00A0';           /* emojipedia.org, \00A0 = espaço */
     list-style-position: inside;
     columns: 2;
+}
+
+@media (max-width: 445px){
+    aside > ul{
+        columns: 1;
+    }
 }
 
 footer{
