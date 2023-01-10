@@ -22,7 +22,7 @@ body{
 
 main{
     background-color: rgba(255, 255, 255, 0.842);
-    width: 90vw;
+    width: 400px;
     margin: auto;
     border-radius: 10px;
     padding: 10px;
@@ -36,10 +36,15 @@ h1{
     font-size: 2em;
 }
 
+img{
+    display: block;
+    margin: auto;
+}
+
 img#phone{
     display: block;
 }
 
-img#tablet, #print, #pc,  #tv{
+img#tablet, #print, #pc, #tv{
     display: none;
 }

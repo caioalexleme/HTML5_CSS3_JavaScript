@@ -1,7 +1,102 @@
 @charset "UTF-8";
 
-/* Todas as outras mídias */
+/* 
 
+Todas as outras mídias 
+
+Typical Devices Breakpoints
+---------------------------
+Pequenas telas: até 600px
+Celular: de 600px até 768px
+Tablet: 768px até 992px
+Desktop: 992px até 1200px
+Grandes telas: acima de 1200px
+
+*/
+
+/* IMPRESSORA */
 @media print {
+
+    *{
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body{
+        background-image: url(../../imagens/back-print.jpg);
+        background-color: white;
+    }
+
+    main{
+        border: 2px solid black;
+        width: 90vw;
+        text-align: center;
+    }
+
+    main::after{
+        content: 'Essa impressão foi feita na casa do Caio';
+        text-decoration: overline;
+    }
+
+    main h1{
+        text-shadow: none;
+        color: black;
+    }
     
+    img#print{
+        display: block;
+    }
+    
+    img#tablet, img#pc, img#phone, img#tv{
+        display: none;
+    }
+}
+
+/* TABLET */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body{
+        background-image: url(../../imagens/back-tablet.jpg);
+    }
+    
+    img#tablet{
+        display: block;
+    }
+    
+    img#phone, img#print, img#pc, img#tv{
+        display: none;
+    }
+    
+}
+
+/* DESKTOP */
+@media screen and (min-width: 993px) and (max-width: 1200px) { 
+    body{
+        background-image: url(../../imagens/back-pc.jpg);
+    }
+    
+    img#pc{
+        display: block;
+    }
+    
+    img#tablet, img#print, img#phone, img#tv{
+        display: none;
+    }
+}
+
+/* GRANDES TELAS GRANDES */
+@media screen and (min-width: 1201px) {
+    body{
+        background-image: url(../../imagens/back-tv.jpg);
+    }
+
+    main{
+        width: 700px;
+    }
+
+    img#tv{
+        display: block;
+    }
+    
+    img#tablet, img#print, img#pc, img#phone{
+        display: none;
+    }
 }
