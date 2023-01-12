@@ -7,8 +7,9 @@
     <title>Media Query</title>
     <link rel="stylesheet" href="estilo/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="estilo/media-query.css">
 </head>
-<body>
+<body onresize="mudouTamanho()">
     
     <header>
         <h1>Meu site</h1>
@@ -48,6 +49,14 @@
             itens.style.display = 'none' 
             } else {
             itens.style.display = 'block'
+            }
+        }
+
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display = 'block'
+            } else {
+                itens.style.display = 'none'
             }
         }
     </script>
